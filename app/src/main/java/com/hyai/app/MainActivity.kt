@@ -101,8 +101,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private lateinit var rvChat: RecyclerView
     private lateinit var etInput: EditText
     private lateinit var btnSend: ImageButton
-    private lateinit var btnVoice: ImageButton
-    private lateinit var btnImage: ImageButton
+    private lateinit var btnVoice: MaterialCardView
+    private lateinit var btnImage: MaterialCardView
     private lateinit var welcomeView: View
     private lateinit var tvModel: TextView
     private lateinit var ivModelIcon: ImageView
@@ -544,8 +544,7 @@ Keep responses natural and conversational. Be fast and direct.${customInstr.let{
     // ─── UI ─────────────────────────────────────────────────────
     private fun updateBtnState() {
         btnSend.isEnabled = !isProcessing; btnSend.alpha = if(isProcessing)0.5f else 1f
-        etInput.isEnabled = !isProcessing; btnVoice.isEnabled = !isProcessing
-        btnImage.isEnabled = !isProcessing
+        etInput.isEnabled = !isProcessing
     }
 
     private fun updateModelView() {
