@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.hyai.app-mergeReleaseResources-36:/layout/item_chat_message.xml",
+        "source": "com.hyai.app-main-38:/layout/item_chat_message.xml"
+    },
+    {
+        "merged": "com.hyai.app-mergeReleaseResources-36:/layout/dialog_personalization.xml",
+        "source": "com.hyai.app-main-38:/layout/dialog_personalization.xml"
+    },
+    {
+        "merged": "com.hyai.app-mergeReleaseResources-36:/layout/dialog_model_select.xml",
+        "source": "com.hyai.app-main-38:/layout/dialog_model_select.xml"
+    },
+    {
+        "merged": "com.hyai.app-mergeReleaseResources-36:/layout/activity_main.xml",
+        "source": "com.hyai.app-main-38:/layout/activity_main.xml"
+    }
+]

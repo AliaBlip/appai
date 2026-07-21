@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-xhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/layout_dialog_model_select.xml.flat",
+        "source": "com.hyai.app-main-38:/layout/dialog_model_select.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/layout_dialog_personalization.xml.flat",
+        "source": "com.hyai.app-main-38:/layout/dialog_personalization.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-xhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_input_field.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_input_field.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_model_grok.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_model_grok.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_check.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_settings.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_chat_user.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_chat_user.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/layout_item_chat_message.xml.flat",
+        "source": "com.hyai.app-main-38:/layout/item_chat_message.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_model_gpt.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_model_gpt.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.hyai.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_welcome_card.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_welcome_card.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_person.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_new_chat.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_new_chat.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_send.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_send.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_model_selector.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_model_selector.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_model_claude.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_model_claude.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_palette.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_palette.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_user.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_user.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_hyai_logo.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_hyai_logo.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_model_deepseek.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_model_deepseek.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_text_size.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_text_size.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_warning.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_chat_ai.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_chat_ai.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_robot.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_robot.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_bg_send_button.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/bg_send_button.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_idea.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_idea.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-xxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_meal.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_meal.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "com.hyai.app-main-38:/mipmap-xxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_code.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_code.xml"
+    },
+    {
+        "merged": "com.hyai.app-merged_res-37:/drawable_ic_model_gemini.xml.flat",
+        "source": "com.hyai.app-main-38:/drawable/ic_model_gemini.xml"
+    }
+]

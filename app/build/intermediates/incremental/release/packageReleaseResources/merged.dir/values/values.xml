@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_blue">#FF40C4FF</color>
+    <color name="accent_cyan">#FF00BCD4</color>
+    <color name="accent_green">#FF00E676</color>
+    <color name="accent_orange">#FFFFAB40</color>
+    <color name="accent_pink">#FFFF4081</color>
+    <color name="accent_purple">#FF6C63FF</color>
+    <color name="ai_bubble">#FF2A2A3E</color>
+    <color name="ai_bubble_text">#FFE0E0E0</color>
+    <color name="dark_background">#FF0D0D0D</color>
+    <color name="dark_card">#FF1E1E1E</color>
+    <color name="dark_nav">#FF1A1A2E</color>
+    <color name="dark_surface">#FF121212</color>
+    <color name="deep_purple">#FF3700B3</color>
+    <color name="divider">#FF2C2C2C</color>
+    <color name="gradient_end">#FFFF4081</color>
+    <color name="gradient_start">#FF6C63FF</color>
+    <color name="model_claude_color">#FFD4A574</color>
+    <color name="model_deepseek_color">#FF4CAF50</color>
+    <color name="model_gemini_color">#FF4285F4</color>
+    <color name="model_gpt_color">#FF6C63FF</color>
+    <color name="model_grok_color">#FFFF6B35</color>
+    <color name="online_green">#FF4CAF50</color>
+    <color name="purple_200">#FFB3AFFF</color>
+    <color name="purple_500">#FF6C63FF</color>
+    <color name="purple_700">#FF5A52E5</color>
+    <color name="swatch_blue">#FF2196F3</color>
+    <color name="swatch_cyan">#FF00BCD4</color>
+    <color name="swatch_green">#FF4CAF50</color>
+    <color name="swatch_orange">#FFFF9800</color>
+    <color name="swatch_pink">#FFE91E63</color>
+    <color name="swatch_purple">#FF6C63FF</color>
+    <color name="text_hint">#FF9E9E9E</color>
+    <color name="user_bubble">#FF6C63FF</color>
+    <color name="user_bubble_text">#FFFFFFFF</color>
+    <string name="about_hyai">About HyAI</string>
+    <string name="accent_color">Accent Color</string>
+    <string name="app_description">HyAI by Hyaxcu — multi-model AI chat</string>
+    <string name="app_name">HyAI</string>
+    <string name="bubble_classic">Classic</string>
+    <string name="bubble_rounded">Rounded</string>
+    <string name="bubble_style">Chat Bubble Style</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="clear_confirm">Delete all messages?</string>
+    <string name="created_by">Created by Hyaxcu</string>
+    <string name="display_name">Display Name</string>
+    <string name="display_name_hint">Enter your name</string>
+    <string name="error_api">API error. Please try again later.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="font_large">Large</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_size">Font Size</string>
+    <string name="font_small">Small</string>
+    <string name="input_hint">Type a message…</string>
+    <string name="model_claude">Claude Sonnet 5</string>
+    <string name="model_deepseek">DeepSeek V4 Pro</string>
+    <string name="model_gemini">Gemini 3.1 Flash</string>
+    <string name="model_gpt">GPT-5.4 Nano</string>
+    <string name="model_grok">Grok 4.1 Fast</string>
+    <string name="new_chat">New Chat</string>
+    <string name="personalization">Personalization</string>
+    <string name="powered_by">Multi-model AI platform</string>
+    <string name="quick_meal">Create a healthy weekly meal plan</string>
+    <string name="quick_python">Write a Python script to sort files</string>
+    <string name="quick_quantum">Explain quantum computing in simple terms</string>
+    <string name="retry">Retry</string>
+    <string name="saved">Saved</string>
+    <string name="select_model">Select AI Model</string>
+    <string name="send">Send</string>
+    <string name="typing">AI is thinking…</string>
+    <string name="welcome_subtitle">Your Intelligent AI Assistant</string>
+    <string name="welcome_title">Welcome to HyAI</string>
+    <string name="yes">Yes</string>
+    <style name="TextAppearance.HyAI.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+    <style name="TextAppearance.HyAI.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.HyAI" parent="Theme.Material3.Dark.NoActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/accent_pink</item>
+        <item name="colorSecondaryVariant">@color/accent_orange</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorOnSurfaceVariant">@color/text_hint</item>
+
+        
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        
+        <item name="materialColorPrimary">@color/purple_500</item>
+        <item name="materialColorOnPrimary">@android:color/white</item>
+        <item name="materialColorPrimaryContainer">@color/purple_700</item>
+        <item name="materialColorOnPrimaryContainer">@android:color/white</item>
+
+        
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.HyAI.Headline</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.HyAI.Body</item>
+    </style>
+    <style name="Widget.HyAI.ChatBubble.AI" parent="">
+        <item name="android:background">@drawable/bg_chat_ai</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/ai_bubble_text</item>
+    </style>
+    <style name="Widget.HyAI.ChatBubble.User" parent="">
+        <item name="android:background">@drawable/bg_chat_user</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/user_bubble_text</item>
+    </style>
+</resources>

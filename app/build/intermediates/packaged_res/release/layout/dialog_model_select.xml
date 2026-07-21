@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF1A1A2E"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/select_model"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Choose which AI model to power your conversation"
+        android:textColor="#FF9E9E9E"
+        android:textSize="13sp" />
+
+    <!-- GPT -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/model_gpt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#FF1E1E3E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPadding="16dp"
+        app:strokeColor="#FF3A3A5E"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF2A2A4E"
+                android:contentDescription="GPT"
+                android:padding="8dp"
+                android:src="@drawable/ic_model_gpt"
+                app:tint="@color/model_gpt_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_gpt"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OpenAI \u00B7 Fast &amp; efficient"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_gpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/model_gpt_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Claude -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/model_claude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#FF1E1E3E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPadding="16dp"
+        app:strokeColor="#FF3A3A5E"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF2A2A4E"
+                android:contentDescription="Claude"
+                android:padding="8dp"
+                android:src="@drawable/ic_model_claude"
+                app:tint="@color/model_claude_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_claude"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anthropic \u00B7 Creative &amp; detailed"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_claude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/model_claude_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Gemini -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/model_gemini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#FF1E1E3E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPadding="16dp"
+        app:strokeColor="#FF3A3A5E"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF2A2A4E"
+                android:contentDescription="Gemini"
+                android:padding="8dp"
+                android:src="@drawable/ic_model_gemini"
+                app:tint="@color/model_gemini_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_gemini"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google \u00B7 Multimodal &amp; reasoning"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_gemini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/model_gemini_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Grok -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/model_grok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#FF1E1E3E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPadding="16dp"
+        app:strokeColor="#FF3A3A5E"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF2A2A4E"
+                android:contentDescription="Grok"
+                android:padding="8dp"
+                android:src="@drawable/ic_model_grok"
+                app:tint="@color/model_grok_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_grok"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xAI \u00B7 Witty &amp; current"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_grok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/model_grok_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- DeepSeek -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/model_deepseek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FF1E1E3E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPadding="16dp"
+        app:strokeColor="#FF3A3A5E"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF2A2A4E"
+                android:contentDescription="DeepSeek"
+                android:padding="8dp"
+                android:src="@drawable/ic_model_deepseek"
+                app:tint="@color/model_deepseek_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_deepseek"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DeepSeek \u00B7 Coding &amp; math"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_deepseek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/model_deepseek_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

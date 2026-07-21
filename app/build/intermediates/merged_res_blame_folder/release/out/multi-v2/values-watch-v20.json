@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.hyai.app-mergeReleaseResources-35:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/8.14.3/transforms/337042bc83ef6045b8f6b4d242308a09/transformed/appcompat-1.6.1/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}
