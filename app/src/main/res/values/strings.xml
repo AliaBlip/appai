@@ -6,11 +6,11 @@
     <string name="input_hint">Type a message…</string>
     <string name="send">Send</string>
     <string name="select_model">Select AI Model</string>
-    <string name="model_gpt">GPT-5.4 Nano</string>
-    <string name="model_claude">Claude Sonnet 5</string>
-    <string name="model_gemini">Gemini 3.1 Flash</string>
-    <string name="model_grok">Grok 4.1 Fast</string>
-    <string name="model_deepseek">DeepSeek V4 Pro</string>
+    <string name="model_gpt">HyAI Basic</string>
+    <string name="model_claude">HyAI Smart</string>
+    <string name="model_gemini">HyAI Vision</string>
+    <string name="model_grok">HyAI Speed</string>
+    <string name="model_deepseek">HyAI Code</string>
     <string name="typing">AI is thinking…</string>
     <string name="error_network">Network error. Please check your connection.</string>
     <string name="error_api">API error. Please try again later.</string>

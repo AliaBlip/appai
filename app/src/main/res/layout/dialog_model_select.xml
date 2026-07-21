@@ -68,7 +68,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="OpenAI \u00B7 Fast &amp; efficient"
+                    android:text="General purpose \u00B7 Fast &amp; reliable"
                     android:textColor="#FF9E9E9E"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -125,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Anthropic \u00B7 Creative &amp; detailed"
+                    android:text="Deep thinking \u00B7 Creative &amp; detailed"
                     android:textColor="#FF9E9E9E"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -182,7 +182,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Google \u00B7 Multimodal &amp; reasoning"
+                    android:text="Multimodal \u00B7 Visual &amp; reasoning"
                     android:textColor="#FF9E9E9E"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -239,7 +239,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="xAI \u00B7 Witty &amp; current"
+                    android:text="Real-time \u00B7 Witty &amp; current"
                     android:textColor="#FF9E9E9E"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -296,7 +296,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DeepSeek \u00B7 Coding &amp; math"
+                    android:text="Technical \u00B7 Coding &amp; math"
                     android:textColor="#FF9E9E9E"
                     android:textSize="12sp" />
             </LinearLayout>
