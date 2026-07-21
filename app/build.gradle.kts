@@ -17,9 +17,22 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("releaseSign") {
+            storeFile = file("../hyai.keystore")
+            storePassword = "hyai123"
+            keyAlias = "hyai"
+            keyPassword = "hyai123"
+        }
+    }
+
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+        }
         release {
             isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("releaseSign")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
