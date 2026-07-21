@@ -1,6 +1,6 @@
 # HyAI - Multi-Model AI Chat Assistant
 
-HyAI is a premium Android chat application created by **Hyaxcu**, providing access to multiple cutting-edge AI models through a single, stunning interface. Powered by the Puter AI platform, it gives you access to GPT, Claude, Gemini, Grok, DeepSeek and more.
+HyAI is a premium Android chat application created by **Hyaxcu**, providing access to multiple cutting-edge AI models through a single, stunning interface. It gives you access to GPT, Claude, Gemini, Grok, DeepSeek and more.
 
 ## Features
 
@@ -54,8 +54,7 @@ The API key is already pre-configured — no additional setup needed.
 
 ## API
 
-This app uses the [Puter AI](https://puter.com) OpenAI-compatible API endpoint:
-- **Endpoint**: `https://api.puter.com/puterai/openai/v1/chat/completions`
+This app uses an OpenAI-compatible API endpoint:
 - **Authentication**: Bearer token
 - **Format**: Fully OpenAI-compatible
 
