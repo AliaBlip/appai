@@ -1,403 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_background"
-    tools:context=".MainActivity">
+    android:background="@color/dark_background">
 
-    <!-- Background Gradient Overlay -->
-    <View
-        android:id="@+id/bg_gradient"
-        android:layout_width="0dp"
-        android:layout_height="280dp"
-        android:background="@drawable/bg_welcome_card"
-        android:alpha="0.15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- MAIN CONTENT -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <!-- Top Bar -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/transparent"
-        android:elevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <View android:id="@+id/bg_gradient" android:layout_width="0dp" android:layout_height="280dp"
+            android:background="@drawable/bg_welcome_card" android:alpha="0.15"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <!-- Top Bar -->
+        <LinearLayout android:id="@+id/top_bar" android:layout_width="0dp" android:layout_height="56dp"
+            android:gravity="center_vertical" android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:contentDescription="HyAI Logo"
-                android:src="@drawable/ic_hyai_logo"
-                app:tint="@color/accent_purple" />
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btn_menu"
+                android:layout_width="40dp" android:layout_height="40dp"
+                app:cardBackgroundColor="#FF2A2A3E" app:cardCornerRadius="20dp"
+                app:cardElevation="4dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:layout_gravity="center" android:contentDescription="Menu"
+                    android:src="@drawable/ic_menu" app:tint="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="sans-serif"
-                android:text="HyAI"
-                android:textColor="#FFFFFF"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                android:layout_marginStart="8dp" android:contentDescription="Logo"
+                android:src="@drawable/ic_hyai_logo" app:tint="@color/accent_purple" />
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:layout_weight="1"
+                android:fontFamily="sans-serif" android:text="HyAI" android:textColor="#FFFFFF"
+                android:textSize="20sp" android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btn_settings"
+                android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="4dp"
+                app:cardBackgroundColor="#FF2A2A3E" app:cardCornerRadius="18dp"
+                app:cardElevation="3dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center" android:contentDescription="Settings"
+                    android:src="@drawable/ic_settings" app:tint="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btn_new_chat"
+                android:layout_width="36dp" android:layout_height="36dp"
+                app:cardBackgroundColor="#FF2A2A3E" app:cardCornerRadius="18dp"
+                app:cardElevation="3dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center" android:contentDescription="New Chat"
+                    android:src="@drawable/ic_new_chat" app:tint="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-    </com.google.android.material.appbar.MaterialToolbar>
 
-    <!-- Model Selector Chip -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_model_selector"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#FF1E1E2E"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <!-- Model Selector Chip + Web Search Toggle -->
+        <LinearLayout android:id="@+id/row_model" android:layout_width="0dp"
+            android:layout_height="40dp" android:layout_marginTop="4dp" android:gravity="center_vertical"
+            android:orientation="horizontal" android:paddingHorizontal="12dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bar">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/card_model_selector"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                app:cardBackgroundColor="#FF1E1E2E" app:cardCornerRadius="18dp"
+                app:cardElevation="3dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:gravity="center" android:orientation="horizontal" android:paddingHorizontal="12dp">
+                    <ImageView android:id="@+id/iv_model_icon" android:layout_width="18dp"
+                        android:layout_height="18dp" android:contentDescription="Model"
+                        android:src="@drawable/ic_model_gpt" app:tint="@color/model_gpt_color" />
+                    <TextView android:id="@+id/tv_selected_model" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                        android:text="@string/model_gpt" android:textColor="#FFFFFF"
+                        android:textSize="13sp" android:textStyle="bold" />
+                    <ImageView android:layout_width="10dp" android:layout_height="10dp"
+                        android:layout_marginStart="4dp" android:contentDescription="Dropdown"
+                        android:src="@drawable/ic_text_size" android:rotation="90" app:tint="#FF9E9E9E" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <ImageView
-                android:id="@+id/iv_model_icon"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:contentDescription="Model icon"
-                android:src="@drawable/ic_model_gpt"
-                app:tint="@color/model_gpt_color" />
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/tv_selected_model"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/model_gpt"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="4dp"
-                android:contentDescription="Dropdown"
-                android:src="@drawable/ic_text_size"
-                android:rotation="90"
-                app:tint="#FF9E9E9E" />
+            <ToggleButton android:id="@+id/btn_web_search" android:layout_width="36dp"
+                android:layout_height="36dp" android:background="@drawable/bg_icon_circle"
+                android:backgroundTint="#FF2A2A3E" android:contentDescription="Web Search"
+                android:drawableTop="@drawable/ic_search" android:gravity="center"
+                android:textOff="" android:textOn="" android:textSize="1sp"
+                android:checked="false" android:padding="6dp" />
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
 
-    <!-- Settings / Personalization Button -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/btn_settings"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#FF2A2A3E"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_new_chat"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="@id/card_model_selector">
+        <!-- Chat RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_chat"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_marginTop="4dp"
+            android:clipToPadding="false" android:overScrollMode="never"
+            android:paddingHorizontal="8dp" android:paddingBottom="4dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/layout_input"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row_model" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:contentDescription="Settings"
-            android:src="@drawable/ic_settings"
-            app:tint="#FFFFFF" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- New Chat Button -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/btn_new_chat"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#FF2A2A3E"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="@id/card_model_selector">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:contentDescription="New Chat"
-            android:src="@drawable/ic_new_chat"
-            app:tint="#FFFFFF" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- RecyclerView for Chat Messages -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_chat"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="8dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/layout_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_model_selector"
-        tools:listitem="@layout/item_chat_message" />
-
-    <!-- Welcome View (shown when no messages) -->
-    <ScrollView
-        android:id="@+id/welcome_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/layout_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_model_selector">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="32dp">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:contentDescription="Logo"
-                android:src="@drawable/ic_hyai_logo"
-                app:tint="@color/accent_purple" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/welcome_title"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/welcome_subtitle"
-                android:textColor="#FF9E9E9E"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/app_description"
-                android:textColor="#FF6C63FF"
-                android:textSize="13sp" />
-
-            <!-- Quick Action Cards -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Try asking me anything"
-                    android:textColor="#FF9E9E9E"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/quick_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    app:cardBackgroundColor="#FF1E1E2E"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:contentPadding="12dp"
-                    app:strokeColor="#FF3A3A5E"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:contentDescription="Idea"
-                            android:src="@drawable/ic_idea"
-                            app:tint="@color/accent_purple" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="@string/quick_quantum"
-                            android:textColor="#FFD0D0D0"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/quick_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    app:cardBackgroundColor="#FF1E1E2E"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:contentPadding="12dp"
-                    app:strokeColor="#FF3A3A5E"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:contentDescription="Code"
-                            android:src="@drawable/ic_code"
-                            app:tint="@color/accent_green" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="@string/quick_python"
-                            android:textColor="#FFD0D0D0"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/quick_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#FF1E1E2E"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:contentPadding="12dp"
-                    app:strokeColor="#FF3A3A5E"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:contentDescription="Meal"
-                            android:src="@drawable/ic_meal"
-                            app:tint="@color/accent_orange" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:text="@string/quick_meal"
-                            android:textColor="#FFD0D0D0"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
+        <!-- Welcome -->
+        <ScrollView android:id="@+id/welcome_view" android:layout_width="0dp" android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/layout_input" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/row_model">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:orientation="vertical" android:padding="32dp">
+                <ImageView android:layout_width="70dp" android:layout_height="70dp"
+                    android:contentDescription="Logo" android:src="@drawable/ic_hyai_logo" app:tint="@color/accent_purple" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="@string/welcome_title"
+                    android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:text="@string/welcome_subtitle"
+                    android:textColor="#FF9E9E9E" android:textSize="15sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp" android:text="@string/app_description"
+                    android:textColor="#FF6C63FF" android:textSize="12sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" android:text="Try asking me anything"
+                        android:textColor="#FF9E9E9E" android:textSize="13sp" />
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/quick_1"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" app:cardBackgroundColor="#FF1E1E2E"
+                        app:cardCornerRadius="14dp" app:cardElevation="2dp" app:contentPadding="12dp"
+                        app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:gravity="center_vertical" android:orientation="horizontal">
+                            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                                android:contentDescription="Idea" android:src="@drawable/ic_idea" app:tint="@color/accent_purple" />
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp" android:layout_weight="1"
+                                android:text="@string/quick_quantum" android:textColor="#FFD0D0D0" android:textSize="13sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/quick_2"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" app:cardBackgroundColor="#FF1E1E2E"
+                        app:cardCornerRadius="14dp" app:cardElevation="2dp" app:contentPadding="12dp"
+                        app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:gravity="center_vertical" android:orientation="horizontal">
+                            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                                android:contentDescription="Code" android:src="@drawable/ic_code" app:tint="@color/accent_green" />
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp" android:layout_weight="1"
+                                android:text="@string/quick_python" android:textColor="#FFD0D0D0" android:textSize="13sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/quick_3"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FF1E1E2E" app:cardCornerRadius="14dp"
+                        app:cardElevation="2dp" app:contentPadding="12dp"
+                        app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:gravity="center_vertical" android:orientation="horizontal">
+                            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                                android:contentDescription="Meal" android:src="@drawable/ic_meal" app:tint="@color/accent_orange" />
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp" android:layout_weight="1"
+                                android:text="@string/quick_meal" android:textColor="#FFD0D0D0" android:textSize="13sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
             </LinearLayout>
+        </ScrollView>
+
+        <!-- Bottom Input -->
+        <LinearLayout android:id="@+id/layout_input" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:background="#FF0D0D0D"
+            android:gravity="center_vertical" android:orientation="horizontal"
+            android:paddingHorizontal="8dp" android:paddingVertical="8dp" android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btn_image"
+                android:layout_width="44dp" android:layout_height="44dp" android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="#FF1E1E2E" app:cardCornerRadius="14dp"
+                app:cardElevation="2dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:layout_gravity="center" android:contentDescription="Image"
+                    android:src="@drawable/ic_image" app:tint="#FF9E9E9E" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <EditText android:id="@+id/et_input" android:layout_width="0dp" android:layout_height="46dp"
+                android:layout_weight="1" android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_input_field" android:elevation="2dp"
+                android:gravity="center_vertical" android:hint="@string/input_hint"
+                android:imeOptions="actionSend" android:inputType="textCapSentences|textMultiLine"
+                android:lines="1" android:maxLines="4" android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp" android:textColor="#FFFFFF"
+                android:textColorHint="#FF6E6E6E" android:textSize="14sp" />
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btn_voice"
+                android:layout_width="44dp" android:layout_height="44dp" android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="#FF1E1E2E" app:cardCornerRadius="14dp"
+                app:cardElevation="2dp" app:strokeColor="#FF3A3A5E" app:strokeWidth="1dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:layout_gravity="center" android:contentDescription="Voice"
+                    android:src="@drawable/ic_mic" app:tint="#FF9E9E9E" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageButton android:id="@+id/btn_send" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/bg_send_button" android:elevation="4dp"
+                android:src="@drawable/ic_send" android:contentDescription="Send"
+                android:scaleType="center" app:tint="#FFFFFF" />
         </LinearLayout>
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Bottom Input Area -->
-    <LinearLayout
-        android:id="@+id/layout_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#FF0D0D0D"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <!-- SIDEBAR OVERLAY -->
+    <View android:id="@+id/sidebar_overlay" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:background="#99000000"
+        android:visibility="gone" android:clickable="true" />
 
-        <EditText
-            android:id="@+id/et_input"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_input_field"
-            android:elevation="2dp"
-            android:gravity="center_vertical|start"
-            android:hint="@string/input_hint"
-            android:imeOptions="actionSend"
-            android:inputType="textCapSentences|textMultiLine"
-            android:lines="1"
-            android:maxLines="4"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FF6E6E6E"
-            android:textSize="15sp" />
+    <!-- SIDEBAR -->
+    <LinearLayout android:id="@+id/layout_sidebar" android:layout_width="280dp"
+        android:layout_height="match_parent" android:background="#FF141424"
+        android:orientation="vertical" android:visibility="gone"
+        android:elevation="16dp">
 
-        <ImageButton
-            android:id="@+id/btn_send"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:background="@drawable/bg_send_button"
-            android:elevation="4dp"
-            android:src="@drawable/ic_send"
-            android:contentDescription="Send"
-            android:scaleType="center"
-            android:importantForAccessibility="no"
-            app:tint="#FFFFFF" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_margin="20dp" android:text="@string/chats"
+            android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="20dp" android:layout_marginBottom="8dp"
+            android:text="Your conversations" android:textColor="#FF9E9E9E" android:textSize="12sp" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#FF2C2C3E" android:layout_marginHorizontal="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_sessions"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:padding="8dp" />
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

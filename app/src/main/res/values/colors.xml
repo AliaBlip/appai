@@ -4,13 +4,13 @@
     <color name="purple_500">#FF6C63FF</color>
     <color name="purple_700">#FF5A52E5</color>
     <color name="purple_200">#FFB3AFFF</color>
-    <color name="deep_purple">#FF3700B3</color>
 
     <!-- Dark theme colors -->
     <color name="dark_surface">#FF121212</color>
     <color name="dark_background">#FF0D0D0D</color>
     <color name="dark_card">#FF1E1E1E</color>
     <color name="dark_nav">#FF1A1A2E</color>
+    <color name="amoled_black">#FF000000</color>
 
     <!-- Chat bubble colors -->
     <color name="user_bubble">#FF6C63FF</color>
@@ -26,6 +26,16 @@
     <color name="accent_orange">#FFFFAB40</color>
     <color name="accent_cyan">#FF00BCD4</color>
 
+    <!-- Theme Colors -->
+    <color name="theme_whatsapp_primary">#FF00A884</color>
+    <color name="theme_whatsapp_bg">#FF0B1418</color>
+    <color name="theme_whatsapp_bubble_user">#FF005C4B</color>
+    <color name="theme_whatsapp_bubble_ai">#FF1F2C33</color>
+    <color name="theme_telegram_primary">#FF8774E1</color>
+    <color name="theme_telegram_bg">#FF0F0F1A</color>
+    <color name="theme_telegram_bubble_user">#FF8774E1</color>
+    <color name="theme_telegram_bubble_ai">#FF272A36</color>
+
     <!-- Color picker swatches -->
     <color name="swatch_purple">#FF6C63FF</color>
     <color name="swatch_blue">#FF2196F3</color>
@@ -35,13 +45,8 @@
     <color name="swatch_cyan">#FF00BCD4</color>
 
     <!-- Status colors -->
-    <color name="online_green">#FF4CAF50</color>
     <color name="text_hint">#FF9E9E9E</color>
     <color name="divider">#FF2C2C2C</color>
-
-    <!-- Gradient start/end -->
-    <color name="gradient_start">#FF6C63FF</color>
-    <color name="gradient_end">#FFFF4081</color>
 
     <!-- Model brand colors -->
     <color name="model_gpt_color">#FF6C63FF</color>
