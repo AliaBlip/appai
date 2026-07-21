@@ -557,7 +557,7 @@ Keep responses natural and conversational. Be fast and direct.${customInstr.let{
     private fun showWelcome() {
         if (currentMessages().isEmpty()) {
             welcomeView.isVisible = true; rvChat.isVisible = false
-            welcomeView.alpha = 0f; welcomeView.animate().alpha(1f).duration(300)
+            welcomeView.alpha = 0f; welcomeView.animate().alpha(1f).setDuration(300)
         } else { welcomeView.isVisible = false; rvChat.isVisible = true }
     }
 
