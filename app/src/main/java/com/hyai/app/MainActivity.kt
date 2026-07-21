@@ -27,6 +27,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -151,6 +153,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         loadSessions()
         setupAdapter()
         setupListeners()
+        applyWindowInsets()
         applyTheme()
         applyAccent()
         updateModelView()
@@ -184,6 +187,26 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
     // ─── VIEWS ─────────────────────────────────────────────────
+    private fun applyWindowInsets() {
+        // The window draws behind the status bar, so push the top toolbar and the
+        // sidebar down by the status bar height. Without this the gear (settings),
+        // menu and new-chat buttons render half-hidden behind the status bar and
+        // become un-tappable.
+        val root = findViewById<View>(android.R.id.content)
+        ViewCompat.setOnApplyWindowInsetsListener(root) { _, insets ->
+            val sb = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val topBar = findViewById<View>(R.id.top_bar)
+            (topBar.layoutParams as? ViewGroup.MarginLayoutParams)?.let {
+                it.topMargin = sb.top
+                topBar.layoutParams = it
+            }
+            layoutSidebar.setPadding(layoutSidebar.paddingLeft, sb.top,
+                layoutSidebar.paddingRight, layoutSidebar.paddingBottom)
+            insets
+        }
+        ViewCompat.requestApplyInsets(root)
+    }
+
     private fun initViews() {
         rvChat = findViewById(R.id.rv_chat); etInput = findViewById(R.id.et_input)
         btnSend = findViewById(R.id.btn_send); btnVoice = findViewById(R.id.btn_voice)
@@ -442,13 +465,14 @@ Keep responses natural and conversational. Be fast and direct.${customInstr.let{
 
         arr.put(JSONObject().apply{put("role","system");put("content",sys)})
 
-        // If image, use multimodal format
+        // If image, use multimodal format (Puter/OpenAI Responses API schema:
+        // input_text + input_image, with image_url as a plain data-URL string)
         if (imgB64 != null) {
             val content = JSONArray()
-            content.put(JSONObject().apply{put("type","text");put("text",text.ifEmpty{"Describe this image"})})
+            content.put(JSONObject().apply{put("type","input_text");put("text",text.ifEmpty{"Describe this image"})})
             content.put(JSONObject().apply{
-                put("type","image_url")
-                put("image_url",JSONObject().apply{put("url","data:image/jpeg;base64,$imgB64")})
+                put("type","input_image")
+                put("image_url","data:image/jpeg;base64,$imgB64")
             })
             val msg = JSONObject()
             msg.put("role","user"); msg.put("content",content)
@@ -458,10 +482,10 @@ Keep responses natural and conversational. Be fast and direct.${customInstr.let{
             for (m in hist) {
                 if (m.isImage && m.imageB64!=null) {
                     val content = JSONArray()
-                    content.put(JSONObject().apply{put("type","text");put("text",m.content.ifEmpty{"Analyze this"})})
+                    content.put(JSONObject().apply{put("type","input_text");put("text",m.content.ifEmpty{"Analyze this"})})
                     content.put(JSONObject().apply{
-                        put("type","image_url")
-                        put("image_url",JSONObject().apply{put("url","data:image/jpeg;base64,${m.imageB64}")})
+                        put("type","input_image")
+                        put("image_url","data:image/jpeg;base64,${m.imageB64}")
                     })
                     arr.put(JSONObject().apply{put("role","user");put("content",content)})
                 } else {
