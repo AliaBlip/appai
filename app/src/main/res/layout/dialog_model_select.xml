@@ -24,7 +24,7 @@
         android:textColor="#FF9E9E9E"
         android:textSize="13sp" />
 
-    <!-- GPT -->
+    <!-- HyAI Basic -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/model_gpt"
         android:layout_width="match_parent"
@@ -33,9 +33,10 @@
         app:cardBackgroundColor="#FF1E1E3E"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPadding="16dp"
+        app:contentPadding="14dp"
         app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,19 +44,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="#FF2A2A4E"
-                android:contentDescription="GPT"
-                android:padding="8dp"
-                android:src="@drawable/ic_model_gpt"
-                app:tint="@color/model_gpt_color" />
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Basic"
+                    android:src="@drawable/ic_model_gpt"
+                    app:tint="@color/model_gpt_color" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
@@ -63,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/model_gpt"
                     android:textColor="#FFFFFF"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -81,7 +87,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Claude -->
+    <!-- HyAI Smart -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/model_claude"
         android:layout_width="match_parent"
@@ -90,9 +96,10 @@
         app:cardBackgroundColor="#FF1E1E3E"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPadding="16dp"
+        app:contentPadding="14dp"
         app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,19 +107,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="#FF2A2A4E"
-                android:contentDescription="Claude"
-                android:padding="8dp"
-                android:src="@drawable/ic_model_claude"
-                app:tint="@color/model_claude_color" />
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Smart"
+                    android:src="@drawable/ic_model_claude"
+                    app:tint="@color/model_claude_color" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
@@ -120,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/model_claude"
                     android:textColor="#FFFFFF"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,7 +150,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Gemini -->
+    <!-- HyAI Vision -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/model_gemini"
         android:layout_width="match_parent"
@@ -147,9 +159,10 @@
         app:cardBackgroundColor="#FF1E1E3E"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPadding="16dp"
+        app:contentPadding="14dp"
         app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,19 +170,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="#FF2A2A4E"
-                android:contentDescription="Gemini"
-                android:padding="8dp"
-                android:src="@drawable/ic_model_gemini"
-                app:tint="@color/model_gemini_color" />
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Vision"
+                    android:src="@drawable/ic_model_gemini"
+                    app:tint="@color/model_gemini_color" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
@@ -177,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/model_gemini"
                     android:textColor="#FFFFFF"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -195,7 +213,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Grok -->
+    <!-- HyAI Speed -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/model_grok"
         android:layout_width="match_parent"
@@ -204,9 +222,10 @@
         app:cardBackgroundColor="#FF1E1E3E"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPadding="16dp"
+        app:contentPadding="14dp"
         app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -214,19 +233,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="#FF2A2A4E"
-                android:contentDescription="Grok"
-                android:padding="8dp"
-                android:src="@drawable/ic_model_grok"
-                app:tint="@color/model_grok_color" />
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Speed"
+                    android:src="@drawable/ic_model_grok"
+                    app:tint="@color/model_grok_color" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
@@ -234,7 +258,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/model_grok"
                     android:textColor="#FFFFFF"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -252,7 +276,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- DeepSeek -->
+    <!-- HyAI Code -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/model_deepseek"
         android:layout_width="match_parent"
@@ -261,9 +285,10 @@
         app:cardBackgroundColor="#FF1E1E3E"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPadding="16dp"
+        app:contentPadding="14dp"
         app:strokeColor="#FF3A3A5E"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -271,19 +296,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="#FF2A2A4E"
-                android:contentDescription="DeepSeek"
-                android:padding="8dp"
-                android:src="@drawable/ic_model_deepseek"
-                app:tint="@color/model_deepseek_color" />
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Code"
+                    android:src="@drawable/ic_model_deepseek"
+                    app:tint="@color/model_deepseek_color" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
@@ -291,7 +321,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/model_deepseek"
                     android:textColor="#FFFFFF"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
