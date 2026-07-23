@@ -1,0 +1,19 @@
+# App build output
+app/build/
+build/
+
+# IDE files
+.idea/
+*.iml
+
+# Local keystore (this one is committed for build)
+# hyai.keystore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gradle caches
+.gradle/
+.cg/
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.HyAI" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/accent_pink</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- Surface & Background -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorOnSurfaceVariant">@color/text_hint</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.HyAI.Headline</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.HyAI.Body</item>
+    </style>
+
+    <style name="TextAppearance.HyAI.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HyAI.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <!-- Chat Bubble Styles -->
+    <style name="Widget.HyAI.ChatBubble.User" parent="">
+        <item name="android:background">@drawable/bg_chat_user</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/user_bubble_text</item>
+    </style>
+
+    <style name="Widget.HyAI.ChatBubble.AI" parent="">
+        <item name="android:background">@drawable/bg_chat_ai</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/ai_bubble_text</item>
+    </style>
+</resources>
