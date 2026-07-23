@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield/H badge shape -->
+    <path
+        android:fillColor="#FF6C63FF"
+        android:pathData="M54,18L18,36v22.5c0,16.65 11.52,32.22 36,40.5 24.48,-8.28 36,-23.85 36,-40.5L90,36 54,18zM54,59.97h25.2C76.41,77.29 66.24,87.46 54,91.89L54,59.97z" />
+    <!-- H letter -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,48L45,72L51,72L51,63L57,63L57,72L63,72L63,48L57,48L57,57L51,57L51,48Z" />
+</vector>

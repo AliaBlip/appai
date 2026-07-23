@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="purple_500">#FF6C63FF</color>
+    <color name="purple_700">#FF5A52E5</color>
+    <color name="purple_200">#FFB3AFFF</color>
+
+    <!-- Dark theme colors -->
+    <color name="dark_surface">#FF121212</color>
+    <color name="dark_background">#FF0D0D0D</color>
+    <color name="dark_card">#FF1E1E1E</color>
+    <color name="amoled_black">#FF000000</color>
+
+    <!-- Chat bubble colors -->
+    <color name="user_bubble">#FF6C63FF</color>
+    <color name="ai_bubble">#FF2A2A3E</color>
+    <color name="user_bubble_text">#FFFFFFFF</color>
+    <color name="ai_bubble_text">#FFE0E0E0</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_purple">#FF6C63FF</color>
+    <color name="accent_blue">#FF40C4FF</color>
+    <color name="accent_green">#FF00E676</color>
+    <color name="accent_pink">#FFFF4081</color>
+    <color name="accent_orange">#FFFFAB40</color>
+    <color name="accent_cyan">#FF00BCD4</color>
+
+    <!-- WhatsApp Theme (Meta/WhatsApp official 2024) -->
+    <color name="wa_bg_dark">#FF0B1418</color>
+    <color name="wa_bg_chat">#FF0D1B16</color>
+    <color name="wa_bubble_user">#FF005C4B</color>
+    <color name="wa_bubble_ai">#FF1F2C33</color>
+    <color name="wa_green">#FF00A884</color>
+    <color name="wa_text">#FFE9EDF0</color>
+    <color name="wa_header">#FF1F2C33</color>
+    <color name="wa_input_bg">#FF1F2C33</color>
+
+    <!-- Telegram Theme (official Telegram dark) -->
+    <color name="tg_bg_dark">#FF0F0F1A</color>
+    <color name="tg_bg_chat">#FF0F0F1A</color>
+    <color name="tg_bubble_user">#FF8774E1</color>
+    <color name="tg_bubble_ai">#FF272A36</color>
+    <color name="tg_blue">#FF8774E1</color>
+    <color name="tg_text">#FFFFFFFF</color>
+    <color name="tg_header">#FF1E1E2E</color>
+    <color name="tg_input_bg">#FF1E1E2E</color>
+
+    <!-- Background presets -->
+    <color name="bg_default_pattern">#FF1A1A2E</color>
+    <color name="bg_wa_pattern">#FF0D1B16</color>
+    <color name="bg_tg_pattern">#FF0F0F1A</color>
+
+    <!-- Color picker swatches -->
+    <color name="swatch_purple">#FF6C63FF</color>
+    <color name="swatch_blue">#FF2196F3</color>
+    <color name="swatch_green">#FF4CAF50</color>
+    <color name="swatch_pink">#FFE91E63</color>
+    <color name="swatch_orange">#FFFF9800</color>
+    <color name="swatch_cyan">#FF00BCD4</color>
+
+    <!-- Status colors -->
+    <color name="text_hint">#FF9E9E9E</color>
+    <color name="divider">#FF2C2C2C</color>
+
+    <!-- Model brand colors -->
+    <color name="model_gpt_color">#FF6C63FF</color>
+    <color name="model_claude_color">#FFD4A574</color>
+    <color name="model_gemini_color">#FF4285F4</color>
+    <color name="model_grok_color">#FFFF6B35</color>
+    <color name="model_deepseek_color">#FF4CAF50</color>
+</resources>
