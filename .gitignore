@@ -12,3 +12,8 @@ build/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Gradle caches
+.gradle/
+.cg/
+
